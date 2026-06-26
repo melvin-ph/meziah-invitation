@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes" />
+    <title>Holy Communion · Meziah Philip</title>
+    <meta name="description"
+        content="You are cordially invited to the Holy Communion celebration of Meziah Philip on 28th June 2026 at IPC Ebenezer Church Sungam, Coimbatore." />
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Quicksand:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <style>
+        /* ──── Reset & Base ──── */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --ivory: #fdf8f0;
+            --cream: #f7efe4;
+            --cream-dark: #eadbcb;
+            --gold: #b58b66;
+            --gold-light: #d4b896;
+            --gold-foil: #c9a96e;
+            --warm-brown: #3f2c1e;
+            --mid-brown: #6f533c;
+            --soft-brown: #8f755f;
+            --peach: #e8c9a8;
+            --blush: rgba(218, 175, 120, 0.18);
+        }
+
+        body {
+            background: linear-gradient(145deg, var(--cream) 0%, var(--cream-dark) 50%, #ddc8b0 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Quicksand', sans-serif;
+            padding: 20px;
+            overflow-x: hidden;
+        }
+
+        /* Floating particles */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(2px 2px at 20% 30%, rgba(201, 169, 110, 0.3), transparent),
+                radial-gradient(2px 2px at 40% 70%, rgba(201, 169, 110, 0.2), transparent),
+                radial-gradient(1.5px 1.5px at 60% 20%, rgba(201, 169, 110, 0.25), transparent),
+                radial-gradient(1.5px 1.5px at 80% 60%, rgba(201, 169, 110, 0.2), transparent),
+                radial-gradient(2px 2px at 10% 80%, rgba(201, 169, 110, 0.15), transparent),
+                radial-gradient(1px 1px at 90% 40%, rgba(201, 169, 110, 0.3), transparent);
+            pointer-events: none;
+            z-index: 0;
+            animation: shimmer 8s ease-in-out infinite alternate;
+        }
+
+        @keyframes shimmer {
+            0% {
+                opacity: 0.4;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        /* ──── Invitation Card ──── */
+        .invitation-card {
+            max-width: 700px;
+            width: 100%;
+            background:
+                url('bg-communion.png') center/cover no-repeat,
+                linear-gradient(180deg, rgba(253, 248, 240, 0.92) 0%, rgba(247, 239, 228, 0.95) 100%);
+            background-blend-mode: overlay;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-radius: 64px 64px 56px 56px;
+            box-shadow:
+                0 30px 60px -15px rgba(120, 80, 50, 0.3),
+                0 10px 30px rgba(200, 160, 120, 0.2),
+                inset 0 1px 2px rgba(255, 245, 230, 0.8),
+                0 0 0 1px rgba(201, 169, 110, 0.15);
+            padding: 40px 36px 48px;
+            border: 1px solid rgba(201, 169, 110, 0.3);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            animation: cardReveal 1s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        @keyframes cardReveal {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Gold foil shimmer overlay */
+        .invitation-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(135deg,
+                    transparent 30%,
+                    rgba(201, 169, 110, 0.06) 45%,
+                    rgba(212, 184, 150, 0.1) 50%,
+                    rgba(201, 169, 110, 0.06) 55%,
+                    transparent 70%);
+            pointer-events: none;
+            z-index: 0;
+            animation: foilShimmer 6s ease-in-out infinite;
+        }
+
+        @keyframes foilShimmer {
+
+            0%,
+            100% {
+                background-position: -200% 0;
+            }
+
+            50% {
+                background-position: 200% 0;
+            }
+        }
+
+        /* Warm glow orbs */
+        .invitation-card::after {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -120px;
+            width: 360px;
+            height: 360px;
+            background: radial-gradient(circle, rgba(218, 175, 120, 0.18) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glow-bottom {
+            position: absolute;
+            bottom: -100px;
+            left: -100px;
+            width: 300px;
+            height: 300px;
+            background: radial-gradient(circle, rgba(190, 150, 100, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* ──── Decorative Cross (SVG) ──── */
+        .decorative-cross {
+            width: 32px;
+            height: 32px;
+            margin: 0 auto 8px;
+            opacity: 0.35;
+            animation: fadeSlideDown 0.8s 0.3s ease both;
+        }
+
+        .decorative-cross svg {
+            fill: var(--gold-foil);
+            filter: drop-shadow(0 2px 6px rgba(160, 120, 80, 0.25));
+        }
+
+        @keyframes fadeSlideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 0.35;
+                transform: translateY(0);
+            }
+        }
+
+        /* ──── Badge ──── */
+        .tiny-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(215, 185, 155, 0.35);
+            backdrop-filter: blur(3px);
+            padding: 7px 22px;
+            border-radius: 60px;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #7a5d43;
+            font-weight: 600;
+            border: 1px solid rgba(201, 169, 110, 0.35);
+            margin-bottom: 16px;
+            animation: fadeIn 0.6s 0.4s ease both;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.95);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* ──── Photo Section ──── */
+        .photo-frame-outer {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            margin: 0 auto 22px;
+            animation: photoReveal 0.8s 0.5s ease both;
+        }
+
+        @keyframes photoReveal {
+            from {
+                opacity: 0;
+                transform: scale(0.85);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Gold ring behind the photo */
+        .photo-ring {
+            position: absolute;
+            inset: -6px;
+            border-radius: 50%;
+            background: conic-gradient(from 0deg,
+                    var(--gold-light),
+                    var(--gold-foil),
+                    var(--gold-light),
+                    #e8d5b8,
+                    var(--gold-light),
+                    var(--gold-foil),
+                    var(--gold-light));
+            animation: ringRotate 12s linear infinite;
+            opacity: 0.6;
+        }
+
+        @keyframes ringRotate {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        .photo-ring-inner {
+            position: absolute;
+            inset: -3px;
+            border-radius: 50%;
+            background: var(--ivory);
+            z-index: 1;
+        }
+
+        .photo-wrapper {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow:
+                0 15px 35px -10px rgba(120, 80, 50, 0.3),
+                inset 0 0 0 3px rgba(201, 169, 110, 0.4);
+            background: rgba(240, 225, 210, 0.4);
+            transition: transform 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .photo-wrapper:hover {
+            transform: scale(1.03);
+        }
+
+        .photo-wrapper img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background: #e2d4c4;
+        }
+
+        .photo-placeholder {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #e8dccc, #d6c5b2);
+            color: var(--gold);
+            font-size: 3rem;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .photo-placeholder span {
+            font-size: 0.85rem;
+            font-weight: 400;
+            color: var(--soft-brown);
+        }
+
+        /* ──── Icon & Title ──── */
+        .icon-chalice {
+            font-size: 2.2rem;
+            color: var(--gold);
+            display: inline-block;
+            filter: drop-shadow(0 4px 10px rgba(160, 120, 80, 0.25));
+            margin-top: 4px;
+            animation: fadeIn 0.6s 0.7s ease both;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3rem;
+            font-weight: 600;
+            color: var(--warm-brown);
+            letter-spacing: 1px;
+            margin: 6px 0 6px;
+            line-height: 1.15;
+            text-shadow: 0 2px 10px rgba(200, 160, 120, 0.15);
+            animation: fadeIn 0.6s 0.8s ease both;
+        }
+
+        .subhead {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--mid-brown);
+            background: rgba(235, 215, 195, 0.35);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 5px 24px;
+            border-radius: 60px;
+            backdrop-filter: blur(2px);
+            margin-bottom: 14px;
+            border: 1px solid rgba(201, 169, 110, 0.25);
+            letter-spacing: 1px;
+            animation: fadeIn 0.6s 0.9s ease both;
+        }
+
+        .divider {
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(90deg, transparent, var(--gold-light), var(--gold), var(--gold-light), transparent);
+            margin: 10px auto 14px;
+            border-radius: 10px;
+            animation: dividerExpand 0.8s 1s ease both;
+        }
+
+        @keyframes dividerExpand {
+            from {
+                width: 0;
+                opacity: 0;
+            }
+
+            to {
+                width: 80px;
+                opacity: 1;
+            }
+        }
+
+        /* ──── Event Details Panel ──── */
+        .event-details {
+            background: rgba(250, 240, 230, 0.5);
+            backdrop-filter: blur(6px);
+            border-radius: 36px;
+            padding: 18px 20px;
+            margin: 14px 0 18px;
+            border: 1px solid rgba(201, 169, 110, 0.25);
+            box-shadow:
+                inset 0 1px 4px rgba(255, 245, 235, 0.7),
+                0 4px 16px rgba(140, 100, 70, 0.04);
+            animation: fadeIn 0.6s 1.1s ease both;
+        }
+
+        .date-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 6px 14px;
+        }
+
+        .date-block .day {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2d1f14;
+            background: rgba(235, 215, 195, 0.4);
+            padding: 0 14px;
+            border-radius: 40px;
+            line-height: 1.3;
+            letter-spacing: 1px;
+        }
+
+        .date-block .month-year {
+            font-size: 1.15rem;
+            font-weight: 500;
+            color: #5d4033;
+        }
+
+        .date-block i {
+            color: var(--gold);
+            font-size: 1rem;
+        }
+
+        .time-block {
+            margin-top: 10px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.7rem;
+            font-weight: 600;
+            color: var(--warm-brown);
+            background: rgba(215, 185, 155, 0.25);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 3px 28px;
+            border-radius: 60px;
+            backdrop-filter: blur(2px);
+            letter-spacing: 1px;
+            border: 1px solid rgba(201, 169, 110, 0.25);
+        }
+
+        .time-block i {
+            font-size: 1.2rem;
+            color: #a77b5a;
+        }
+
+        /* ──── Name ──── */
+        .highlight-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 12px 0 6px;
+            background: linear-gradient(135deg, #4d3222 0%, #8a6a4e 50%, #c9a96e 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: fadeIn 0.6s 1.2s ease both;
+        }
+
+        .name-stars {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .name-stars i {
+            font-size: 0.9rem;
+            color: var(--gold);
+            -webkit-text-fill-color: var(--gold);
+            animation: starPulse 3s ease-in-out infinite;
+        }
+
+        .name-stars i:last-child {
+            animation-delay: 1.5s;
+        }
+
+        @keyframes starPulse {
+
+            0%,
+            100% {
+                opacity: 0.6;
+                transform: scale(1);
+            }
+
+            50% {
+                opacity: 1;
+                transform: scale(1.15);
+            }
+        }
+
+        /* ──── Invite Text ──── */
+        .invite-text {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #4d3a2b;
+            margin: 6px 0 14px;
+            padding: 0 12px;
+            line-height: 1.6;
+            animation: fadeIn 0.6s 1.3s ease both;
+        }
+
+        .invite-text i {
+            color: var(--gold);
+        }
+
+        /* ──── Blessing ──── */
+        .blessing-line {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.1rem;
+            font-weight: 400;
+            font-style: italic;
+            color: #735a48;
+            background: rgba(235, 215, 195, 0.28);
+            padding: 8px 22px;
+            border-radius: 60px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            backdrop-filter: blur(2px);
+            border: 1px solid rgba(201, 169, 110, 0.2);
+            margin-bottom: 18px;
+            animation: fadeIn 0.6s 1.4s ease both;
+        }
+
+        .blessing-line .dove-icon {
+            font-size: 0.95rem;
+            color: var(--gold);
+            animation: doveFly 4s ease-in-out infinite alternate;
+        }
+
+        .blessing-line .dove-icon:last-child {
+            animation-direction: alternate-reverse;
+        }
+
+        @keyframes doveFly {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+
+            100% {
+                transform: translateY(-3px) rotate(2deg);
+            }
+        }
+
+        /* ──── Location Buttons ──── */
+        .location-section {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin: 14px 0 18px;
+            animation: fadeIn 0.6s 1.5s ease both;
+        }
+
+        .location-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: rgba(250, 240, 230, 0.55);
+            backdrop-filter: blur(6px);
+            border: 1px solid rgba(201, 169, 110, 0.35);
+            padding: 14px 22px;
+            border-radius: 60px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--warm-brown);
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 14px rgba(140, 100, 70, 0.06);
+            letter-spacing: 0.3px;
+        }
+
+        .location-btn i {
+            font-size: 1.15rem;
+            color: var(--gold);
+            min-width: 24px;
+            transition: transform 0.3s ease;
+        }
+
+        .location-btn .btn-label {
+            flex: 1;
+            text-align: left;
+        }
+
+        .location-btn .btn-arrow {
+            font-size: 0.85rem;
+            color: #a77b5a;
+            transition: transform 0.3s ease;
+        }
+
+        .location-btn:hover {
+            background: rgba(215, 185, 155, 0.35);
+            border-color: var(--gold-foil);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(130, 90, 60, 0.14);
+        }
+
+        .location-btn:hover i:first-child {
+            transform: scale(1.1);
+        }
+
+        .location-btn:hover .btn-arrow {
+            transform: translateX(5px);
+        }
+
+        .location-btn.church i:first-child {
+            color: #8a6a4e;
+        }
+
+        .location-btn.home i:first-child {
+            color: var(--gold);
+        }
+
+        /* ──── RSVP Button ──── */
+        .btn-rsvp {
+            background: linear-gradient(135deg, rgba(201, 169, 110, 0.2), rgba(200, 170, 145, 0.25));
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(201, 169, 110, 0.4);
+            padding: 13px 32px;
+            border-radius: 80px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--warm-brown);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+            cursor: default;
+            box-shadow: 0 6px 18px rgba(140, 100, 70, 0.08);
+            letter-spacing: 0.8px;
+            margin-top: 4px;
+            animation: fadeIn 0.6s 1.6s ease both;
+        }
+
+        .btn-rsvp i {
+            color: #a77b5a;
+            font-size: 1.05rem;
+        }
+
+        .btn-rsvp .heart {
+            color: #c29a7a;
+            animation: heartbeat 2s ease-in-out infinite;
+        }
+
+        @keyframes heartbeat {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            15% {
+                transform: scale(1.2);
+            }
+
+            30% {
+                transform: scale(1);
+            }
+
+            45% {
+                transform: scale(1.15);
+            }
+
+            60% {
+                transform: scale(1);
+            }
+        }
+
+        .btn-rsvp:hover {
+            background: linear-gradient(135deg, rgba(201, 169, 110, 0.32), rgba(200, 170, 145, 0.38));
+            border-color: var(--gold-foil);
+            transform: scale(1.02);
+            box-shadow: 0 12px 24px rgba(130, 90, 60, 0.12);
+        }
+
+        /* ──── Footer ──── */
+        .footer-note {
+            margin-top: 28px;
+            font-size: 0.78rem;
+            font-weight: 300;
+            color: var(--soft-brown);
+            letter-spacing: 0.5px;
+            border-top: 1px solid rgba(201, 169, 110, 0.2);
+            padding-top: 16px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 4px 18px;
+            animation: fadeIn 0.6s 1.7s ease both;
+        }
+
+        .footer-note span {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .footer-note span i {
+            color: var(--gold);
+            font-size: 0.7rem;
+        }
+
+        .vibe-tag {
+            margin-top: 14px;
+            font-size: 0.6rem;
+            opacity: 0.35;
+            letter-spacing: 2.5px;
+            color: var(--soft-brown);
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            animation: fadeIn 0.6s 1.8s ease both;
+        }
+
+        .vibe-tag .dot {
+            width: 3px;
+            height: 3px;
+            background: var(--soft-brown);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        /* ──── Responsive ──── */
+        @media (max-width: 500px) {
+            .invitation-card {
+                padding: 28px 18px 32px;
+                border-radius: 44px 44px 36px 36px;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .date-block .day {
+                font-size: 1.5rem;
+            }
+
+            .time-block {
+                font-size: 1.4rem;
+                padding: 2px 20px;
+            }
+
+            .highlight-name {
+                font-size: 1.8rem;
+            }
+
+            .photo-frame-outer {
+                width: 180px;
+                height: 180px;
+            }
+
+            .location-btn {
+                font-size: 0.85rem;
+                padding: 12px 16px;
+            }
+
+            .subhead {
+                font-size: 0.82rem;
+                padding: 4px 18px;
+            }
+
+            .btn-rsvp {
+                padding: 10px 22px;
+                font-size: 0.9rem;
+            }
+
+            .event-details {
+                padding: 14px 14px;
+                border-radius: 28px;
+            }
+
+            .blessing-line {
+                font-size: 0.95rem;
+                padding: 6px 16px;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .invitation-card {
+                padding: 22px 14px 26px;
+                border-radius: 36px 36px 28px 28px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .date-block {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .photo-frame-outer {
+                width: 150px;
+                height: 150px;
+            }
+
+            .location-btn {
+                font-size: 0.78rem;
+                padding: 10px 14px;
+            }
+
+            .highlight-name {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invitation-card">
+        <div class="glow-bottom"></div>
+
+        <div class="content">
+            <!-- Decorative Cross -->
+            <div class="decorative-cross">
+                <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M42 0 h16 v38 h38 v16 h-38 v38 h-16 v-38 h-38 v-16 h38 z" rx="4" ry="4" />
+                </svg>
+            </div>
+
+            <!-- Badge -->
+            <div class="tiny-badge">
+                <i class="fas fa-cross"></i>
+                <span>you're invited</span>
+            </div>
+
+            <!-- Photo with Gold Ring -->
+            <div class="photo-frame-outer">
+                <div class="photo-ring"></div>
+                <div class="photo-ring-inner"></div>
+                <div class="photo-wrapper">
+                    <img src="meziah-philip.jpg" alt="Meziah Philip · Holy Communion"
+                        onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                    <div class="photo-placeholder" style="display: none;">
+                        <i class="fas fa-chalice"></i>
+                        <span>photo</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chalice Icon -->
+            <div class="icon-chalice">
+                <i class="fas fa-chalice"></i>
+            </div>
+
+            <!-- Title -->
+            <h1>Holy Communion</h1>
+
+
+
+            <div class="divider"></div>
+
+            <!-- Event Details -->
+            <div class="event-details">
+                <div class="date-block">
+                    <span class="day">
+                        <i class="fas fa-calendar-alt" style="margin-right: 6px; font-size: 1.1rem;"></i>28
+                    </span>
+                    <span class="month-year">June 2026</span>
+                    <span style="font-weight: 300; color: #735a48;">·</span>
+                    <span style="font-weight: 500; color: #4d3829;">
+                        <i class="fas fa-clock" style="margin-right: 4px;"></i> Sunday
+                    </span>
+                </div>
+                <div class="time-block">
+                    <i class="fas fa-hourglass-start"></i>
+                    8:30 AM
+                </div>
+            </div>
+
+            <!-- Name -->
+            <div class="highlight-name">
+                <span class="name-stars">
+                    <i class="fas fa-star-of-david"></i>
+                    Meziah Philip
+                    <i class="fas fa-star-of-david"></i>
+                </span>
+            </div>
+
+            <!-- Invite Text -->
+            <div class="invite-text">
+                <i class="fas fa-feather-alt"></i>
+                With grateful hearts, we invite you to share in this sacrament of faith.
+                <i class="fas fa-feather-alt"></i>
+            </div>
+
+            <!-- Blessing Quote -->
+            <div class="blessing-line">
+                <i class="fas fa-dove dove-icon"></i>
+                "Let the children come to me"
+                <i class="fas fa-dove dove-icon"></i>
+            </div>
+
+            <!-- Location Buttons -->
+            <div class="location-section">
+                <a href="https://www.google.com/maps/place/IPC+Ebenezer+Church+Sungam/data=!4m2!3m1!1s0x0:0x860a07ebf95e59c9?sa=X&ved=1t:2428&ictx=111"
+                    target="_blank" rel="noopener" class="location-btn church" id="btn-church-location">
+                    <i class="fas fa-church"></i>
+                    <span class="btn-label">📍 Church · IPC Ebenezer Church Sungam</span>
+                    <span class="btn-arrow"><i class="fas fa-chevron-right"></i></span>
+                </a>
+
+                <a href="https://maps.app.goo.gl/vErseK53pzYjtrXD8" target="_blank" rel="noopener"
+                    class="location-btn home" id="btn-home-location">
+                    <i class="fas fa-home"></i>
+                    <span class="btn-label">🏠 Home · Kovaipudur, Coimbatore</span>
+                    <span class="btn-arrow"><i class="fas fa-chevron-right"></i></span>
+                </a>
+            </div>
+
+            <!-- RSVP -->
+            <div class="btn-rsvp" id="btn-rsvp">
+                <i class="fas fa-envelope"></i>
+                <span>RSVP · with love</span>
+                <i class="fas fa-heart heart"></i>
+            </div>
+
+            <!-- Footer -->
+            <div class="footer-note">
+                <span><i class="fas fa-map-pin"></i> 28 Jun 2026 · 8:30 AM</span>
+                <span><i class="fas fa-leaf"></i> sunday service</span>
+            </div>
+
+            <!-- Vibe Tag -->
+        </div>
+    </div>
+</body>
+
+</html>
